@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="WpfUserControlLib.LabelAndValue2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfUserControlLib"
+             mc:Ignorable="d" 
+             d:DesignHeight="{Binding BlockHeight2}" d:DesignWidth="{Binding LineWidth}">
+    <UserControl.DataContext>
+        <local:LabelAndValue2Context/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{Binding LabelWidth, Mode=OneWay}"/>
+            <ColumnDefinition Width="{Binding ValueWidth, Mode=OneWay}"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Background="{Binding LabelBackgroundBrush, Mode=OneWay}"
+                BorderThickness="{Binding TopLeftBorderThickness, Mode=OneWay}"
+                CornerRadius="{Binding TopLeftCornerRadius, Mode=OneWay}"
+                BorderBrush="{Binding BorderBrush}">
+            <Label Content="{Binding LabelText, Mode=OneWay}"
+                   Padding="{Binding LabelPadding, Mode=OneWay}"
+                   HorizontalContentAlignment="{Binding LabelAlignment, Mode=OneWay}"
+                   FontSize="{Binding FontSize, Mode=OneWay}" 
+                   Foreground="{Binding LabelForegroundBrush, Mode=OneWay}"
+                   />
+        </Border>
+        <Border Grid.Row="0" Grid.Column="1" Background="{Binding ValueBackgroundBrush, Mode=OneWay}"
+                BorderThickness="{Binding TopRightBorderThickness, Mode=OneWay}"
+                CornerRadius="{Binding TopRightCornerRadius, Mode=OneWay}"
+                BorderBrush="{Binding BorderBrush}">
+            <Label Content="{Binding ValueText, Mode=OneWay}"
+                   Padding="{Binding ValuePadding, Mode=OneWay}"
+                   HorizontalContentAlignment="{Binding valueAlignment, Mode=OneWay}"
+                   FontSize="{Binding FontSize, Mode=OneWay}" 
+                   Foreground="{Binding ValueForegroundBrush, Mode=OneWay}"
+                   />
+        </Border>
+        <Border Grid.Row="1" Grid.Column="0" Background="{Binding LabelBackgroundBrush, Mode=OneWay}"
+                BorderThickness="{Binding BottomLeftBorderThickness, Mode=OneWay}"
+                CornerRadius="{Binding BottomLeftCornerRadius, Mode=OneWay}"
+                BorderBrush="{Binding BorderBrush}">
+            <Label Content="{Binding LabelText1, Mode=OneWay}"
+                   Padding="{Binding LabelPadding, Mode=OneWay}"
+                   HorizontalContentAlignment="{Binding LabelAlignment, Mode=OneWay}"
+                   FontSize="{Binding FontSize, Mode=OneWay}" 
+                   Foreground="{Binding LabelForegroundBrush, Mode=OneWay}"
+                   />
+        </Border>
+        <Border Grid.Row="1" Grid.Column="1" Background="{Binding ValueBackgroundBrush, Mode=OneWay}"
+                BorderThickness="{Binding BottomRightBorderThickness, Mode=OneWay}"
+                CornerRadius="{Binding BottomRightCornerRadius, Mode=OneWay}"
+                BorderBrush="{Binding BorderBrush}">
+            <Label Content="{Binding ValueText1, Mode=OneWay}"
+                   Padding="{Binding ValuePadding, Mode=OneWay}"
+                   HorizontalContentAlignment="{Binding valueAlignment, Mode=OneWay}"
+                   FontSize="{Binding FontSize, Mode=OneWay}" 
+                   Foreground="{Binding ValueForegroundBrush, Mode=OneWay}"
+                   />
+        </Border>
+    </Grid>
+</UserControl>
